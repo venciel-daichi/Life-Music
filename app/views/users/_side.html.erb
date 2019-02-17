@@ -1,0 +1,94 @@
+<div class = "container">
+	<div class = "row">
+		<div class = "col-xs-4 side_bar">
+
+			<div class = "plofile_box">
+				<div class = "plofile_detail new_post">
+					<p>
+					<%=link_to "Create New Music", new_music_path %>
+					</p>
+
+				</div>
+				<div class="plofile_detail mypage_box">
+					<p>
+					<%= link_to "My Page", users_path %>
+					</p>
+				</div>
+				<div class = "plofile_detail user_image_box">
+				<p><%= attachment_image_tag @user, :image, :fill, 180, 180, format: 'jpeg', fallback: "noimage_user.jpeg",size: '180x180' %>
+				</p>
+				</div>
+				<div class = "plofile_detail user_name_box">
+					<p>
+					<%= @user.name%>
+					</p>
+				</div>
+
+				<div class="f_box clearfix">
+					<div class="plofile_detail user_follow_box">
+						<p>Following <br><%= @user.active_relationships.count %></p>
+					</div>
+					<div class="plofile_detail user_follow_box">
+						<p>Followed <br><%= @user.passive_relationships.count %></p>
+					</div>
+						<% if current_user != @user %>
+							<div class="plofile_detail user_follow_box follow_button_box">
+       							<% if user.followed_by?(current_user) %>
+            						<p><%=link_to "UnFollow", user_relationships_path(user.id), method: :delete %></p>
+        						<% else %>
+            						<p><%=link_to "Follow", user_relationships_path(user.id), method: :post %></p>
+        						<% end %>
+							</div>
+    					<% end %>
+				</div>
+				    <div class="plofile_detail user_introduction_box">
+						<p>
+						<%= @user.introduction %>
+						</p>
+					</div>
+					<div class="plofile_detail user_edit_box">
+					<% if @user.id == current_user.id %>
+						<p>
+						<%= link_to "Edit My Plofile", edit_user_path(@user.id) %>
+						</p>
+						<% else %>
+						<p></p>
+					<% end %>
+					</div>
+			</div>
+		    <div class = "side_border"></div>
+		    <div class="fovorite_music_box">
+		    	<% @favorite_music = FavoriteMusic.find_by(user_id:@user.id) %>
+		    	<div class="favorite_music_detail favorite_music_image_box">
+		    		<p><%= attachment_image_tag @favorite_music, :image, :fill, 180, 180, format: 'jpeg', fallback: "noimage_music.jpeg",size: '180x180' %></p>
+		    	</div>
+		    	<div class="favorite_music_detail favorite_music_name_box">
+		    		<p><%= @favorite_music.try(:music_name) %></p>
+		    	</div>
+		    	<div class="favorite_music_detail favorite_artist_name_box">
+		    		<p><%= @favorite_music.try(:artist_name) %></p>
+		    	</div>
+		    	<div class="favorite_music_detail favorite_music_introduction_box">
+		    		<p><%= @favorite_music.try(:introduction) %></p>
+		    	</div>
+		    	<div class="favorite_music_detail favorite_music_url_box">
+		    		<p><%= @favorite_music.try(:music_url) %></p>
+		    	</div>
+		    	<div class="plofile_detail user_edit_box">
+		    	<% if @user.id == current_user.id %>
+		    		<% if @favorite_music == nil %>
+		    			<p>
+						<%= link_to "Create My Favorite Music", new_favorite_music_path %>
+						</p>
+					<% else %>
+						<p>
+						<%= link_to "Edit My Favorite Music", edit_favorite_music_path(@favorite_music.id) %>
+						</p>
+					<% end %>
+				<% else %>
+				<p></p>
+				<% end %>
+				</div>
+		    </div>
+
+		</div>

@@ -1,0 +1,22 @@
+<h1>edit</h1>
+<h1 class = "top_block"></h1>
+<h1 class="new_music_head">Edit My Plofile</h1>
+
+<div class = "new_music_box">
+	<%= form_for(@user) do |f| %>
+			<div class = "box new_music_image">
+				<p>image_id</p>
+				<%= f.file_field :image , class:"file_bar" %>
+			</div>
+			<div class = "box new_music_name">
+				<p>name</p>
+				<%= f.text_field :name %>
+			</div>
+			<div class = "box new_introduction">
+			<p>introduction</p>
+				<%= f.text_area :introduction %>
+			</div>
+			<%= f.submit 'Update User Info' %>
+	<% end %>
+</div>
+

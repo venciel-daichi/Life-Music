@@ -1,0 +1,306 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+	@import "bootstrap-sprockets";  /*ここを追加*/
+    @import "bootstrap";            /*ここを追加*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after {
+  clear: both;
+}
+.header_z_index{
+	z-index: 9999;
+	position:  fixed;
+	box-sizing:  border-box;
+	width: 100%;
+	top:0;
+}
+.top_block{
+	width: 100%;
+	height: 50px;
+}
+.block_1{
+	width: 100%;
+	height: 40px;
+}
+.block_2{
+	width: 100%;
+	height: 30px;
+}
+.title_text{
+	font-size: 45px;
+}
+.header_text{
+	font-size: 20px;
+}
+.header_color{
+	background-color: #c0c0c0;
+}
+.text{
+	color:#696969;
+	font-family: serif;
+}
+.text_top{
+	color: #2b2b2b;
+}
+.top_message{
+	font-family: serif;
+	font-size: 70px;
+	text-align: center;
+	padding-top: 200px;
+	padding-right: 250px;
+}
+.top_back_image{
+	width:100%;
+	height: 800px;
+	background-image: url(top_image.jpeg);
+	background-size:cover;
+}
+.login_signin{
+	text-align: center;
+}
+.top_text{
+	font-family: serif;
+	font-size: 50px;
+	text-align: center;
+	padding-top: 150px;
+	padding-left: 450px;
+}
+.main_bar{
+	background-color: black;
+	margin-bottom: 10px;
+}
+.side_bar{
+	background-color: #4682b4;
+	height: 2000px;
+
+}
+.box_right{
+	float: left;
+}
+.plofile_bar_box{
+	background-color: pink;
+	width: 100%;
+	height: 70px;
+}
+
+.plofile_bar_image_box{
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.plofile_bar_name_box{
+	background-color: silver;
+	width: 500px;
+	height: 50px;
+	float: right;
+}
+
+
+.image_box{
+	background-color: white;
+	width:350px;
+	height: 350px;
+}
+.music_name_box{
+	background-color: silver;
+	width:350px;
+	height: 80px;
+}
+.artist_name_box{
+	background-color: silver;
+	width:350px;
+	height: 80px;
+}
+.introduction_box{
+	float: left;
+	background-color:gold;
+	width:350px;
+	height: 350px;
+}
+.url_box{
+	float: left;
+	background-color: pink;
+	width:350px;
+	height: 80px;
+}
+.favotite_box{
+	float: left;
+	background-color: white;
+	width:200px;
+	height: 50px;
+}
+.box{
+	margin: 10px;
+	text-align: center;
+}
+.plofile_detail{
+	margin: 10px;
+	text-align: center;
+}
+
+.new_post{
+	z-index: 9999;
+	position: fixed;
+	float:right;
+	background-color: orange;
+	width:65px;
+	height: 65px;
+	top:150px;
+	left:460px;
+	border-radius: 15px;
+}
+.mypage_box{
+	background-color: #c0c0c0;
+	width: 300px;
+	height: 50px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.user_image_box{
+	background-color: white;
+	width:180px;
+	height: 180px;
+	margin: 0 auto;
+	margin-top:20px;
+}
+.user_name_box{
+	background-color: silver;
+	width:300px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.user_follow_box{
+	float: left;
+	background-color:gray;
+	width:60px;
+	height: 40px;
+	margin-left: 30px;
+}
+.user_introduction_box{
+	background-color: gold;
+	width: 300px;
+	height: 150px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.user_edit_box{
+	background-color: gold;
+	width: 300px;
+	height: 50px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.side_border{
+	border-bottom: 2px solid black;
+}
+.favorite_music_detail{
+	margin: 10px;
+	text-align: center;
+}
+.favorite_music_image_box{
+	background-color: white;
+	width:180px;
+	height: 180px;
+	margin:0 auto;
+	margin-top: 10px;
+}
+.favorite_music_name_box{
+	background-color: silver;
+	width: 300px;
+	height:35px;
+	margin:0 auto;
+	margin-top: 10px;
+}
+.favorite_artist_name_box{
+	background-color: silver;
+	width: 300px;
+	height:35px;
+	margin:0 auto;
+	margin-top: 10px;
+}
+.favorite_music_introduction_box{
+	background-color: gold;
+	width:300px;
+	height: 150px;
+	margin:0 auto;
+	margin-top: 10px;
+}
+.favorite_music_url_box{
+	background-color: pink;
+	width: 300px;
+	height: 40px;
+	margin:0 auto;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.new_music_box{
+	width: 650px;
+	height: 650px;
+	background-color: black;
+	margin:0 auto;
+	text-align: center;
+	padding-top: 20px;
+}
+.new_music_head{
+	text-align: center;
+}
+.file_bar{
+	margin:0 auto;
+}
+.new_music_image{
+	width:600px;
+	height: 100px;
+	background-color: silver;
+	margin: 0 auto;
+	padding: 10px;
+}
+.new_music_name{
+	width:600px;
+	height: 100px;
+	background-color: gray;
+	margin: 0 auto;
+	padding: 10px;
+}
+.new_artist_name{
+	width:600px;
+	height: 100px;
+	background-color: silver;
+	margin: 0 auto;
+	padding: 10px;
+}
+.new_introduction{
+	width:600px;
+	height: 100px;
+	background-color: gray;
+	margin: 0 auto;
+	padding: 10px;
+}
+.new_music_url{
+	width:600px;
+	height: 100px;
+	background-color: silver;
+	margin: 0 auto;
+	padding: 10px;
+}
+

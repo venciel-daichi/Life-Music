@@ -1,0 +1,66 @@
+<h1 class = "top_block"></h1>
+<%= render 'users/side' , users:@users, user: @user  %>
+<% @musics.each do |music| %>
+<div class = "col-xs-8 main_bar">
+
+	<div class="box plofile_bar_box">
+		<div class = "box plofile_bar_image_box">
+			<p>	<%= attachment_image_tag music.user, :image, :fill, 50, 50, format: 'jpeg', fallback: "noimage_user.jpeg",size: '50x50' %>
+			</p>
+
+		</div>
+		<div class = "box plofile_bar_name_box">
+			<p>
+				<%= link_to music.user.name , user_path(music.user.id) %>
+			</p>
+		</div>
+	</div>
+		<div class="box_right">
+			<div class = "box image_box">
+				<p><%= attachment_image_tag music, :image, :fill, 350, 350, format: 'jpeg', fallback: "noimage_music.jpeg",size: '350x350' %>
+				</p>
+			</div>
+			<div class = "box music_name_box">
+				<p><%= music.music_name %></p>
+			</div>
+			<div class = "box artist_name_box">
+				<p><%= music.artist_name %></p>
+			</div>
+		</div>
+
+		<div class = "box introduction_box">
+			<p><%= music.introduction %></p>
+		</div>
+
+		<div class = "box url_box">
+			<p><%= music.music_url %></p>
+		</div>
+<!-- fav -->
+		<div class="box favotite_box">
+	<% if current_user.id != music.user_id %>
+		<% if music.favorited_by?(current_user) %>
+  			<li>
+    			<%= link_to music_favorites_path(music.id) , method: :delete do %>
+      			<%= music.favorites.count %> FAV
+   				<% end %>
+  			</li>
+		<% else %>
+  			<li>
+   				<%= link_to music_favorites_path(music.id) , method: :post do %>
+     			<%= music.favorites.count %> FAV
+    			<% end %>
+  			</li>
+		<% end %>
+	<% else %>
+		<%= link_to "Edit My Music", edit_music_path(music.id) %>
+	<% end %>
+		</div>
+<!-- fav -->
+</div>
+<% end %>
+<%= paginate @musics, class: "paginate" %>
+<!-- グリッドシステムの閉じタグ（containerとrow） -->
+	</div>
+</div>
+<!-- グリッドシステムの閉じタグ（containerとrow） -->
+
