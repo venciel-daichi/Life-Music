@@ -1,9 +1,9 @@
 <h1 class = "top_block"></h1>
-<h1 class="new_music_head">Create New Favorite Music</h1>
+<h1 class="new_music_head">Create New<strong class = "favorite_text"> Favorite </strong>Music</h1>
 
 <div class = "new_music_box">
 	<%= form_for(@favorite_music) do |f| %>
-			<div class = "box new_music_image">
+			<div class = "box new_music_image edit_color_1">
 				<p>image_id</p>
 				<%= f.file_field :image , class:"file_bar" %>
 			</div>
@@ -11,17 +11,17 @@
 				<p>music_name</p>
 				<%= f.text_field :music_name %>
 			</div>
-			<div class = "box new_artist_name">
+			<div class = "box new_artist_name edit_color_1">
 				<p>artist_name</p>
-				<%= f.text_field :artist_name %>
+				<%= f.text_field :artist_name , class:"edit_color_2" %>
 			</div>
 			<div class = "box new_introduction">
 			<p>introduction</p>
 				<%= f.text_area :introduction %>
 			</div>
-			<div class = "box new_music_url">
+			<div class = "box new_music_url edit_color_1">
 			<p>URL</p>
-			<%= f.text_field :music_url %>
+			<%= f.text_field :music_url , class:"edit_color_2" %>
 			</div>
 		 <%= f.submit 'New Music' %>
 	<% end %>

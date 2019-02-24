@@ -1,0 +1,56 @@
+<h1 class = "top_block"></h1>
+<%= render 'users/side' , user:@user  %>
+<div class = "col-xs-8 follow_title_bar">
+<h1 class = "follow_title">Following</h1>
+<h1>Followed</h1>
+</div>
+<div class = "col-xs-8 main_bar">
+	<div class="col-xs-5">
+
+	<% @follows.each do |follow| %>
+
+		<div class="follow_box plofile_bar_box iei_2">
+			<div class = "follow_image_box">
+				<p>
+					<%= attachment_image_tag follow.follower ,:image , :fill, 50, 50, format: 'jpeg', fallback: "noimage_user.jpeg",size: '50x50' , class:"iei_2" %>
+				</p>
+
+			</div>
+			<div class = "follow_name_box iei_2">
+				<p>
+				<%= link_to follow.follower.name , user_path(follow.follower.id) , :style=>"color:#282929" %>
+				</p>
+			</div>
+		</div>
+	<% end %>
+	</div>
+
+	<div class="col-xs-5">
+
+	<% @followed.each do |follow| %>
+
+		<div class="follow_box plofile_bar_box iei_2">
+			<div class = "follow_image_box">
+				<p>
+					<%= attachment_image_tag follow.following ,:image , :fill, 50, 50, format: 'jpeg', fallback: "noimage_user.jpeg",size: '	50x50' , class: "image_too_big iei_2" %>
+				</p>
+
+			</div>
+			<div class = "follow_name_box iei_2">
+				<p>
+				<%= link_to follow.following.name , user_path(follow.following.id) , :style=>"color:#282929" %>
+				</p>
+			</div>
+		</div>
+	<% end %>
+	</div>
+
+
+</div>
+
+
+<!-- グリッドシステムの閉じタグ（containerとrow） -->
+</div>
+</div>
+<!-- グリッドシステムの閉じタグ（containerとrow） -->
+

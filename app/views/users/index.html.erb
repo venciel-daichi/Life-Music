@@ -3,14 +3,14 @@
 <% @musics.each do |music| %>
 <div class = "col-xs-8 main_bar">
 
-	<div class="box plofile_bar_box">
+	<div class="box plofile_bar_box iei_2">
 		<div class = "box plofile_bar_image_box">
-			<p><%= attachment_image_tag music.user, :image, :fill, 50, 50, format: 'jpeg', fallback: "noimage_user.jpeg",size: '50x50' %>
+			<p><%= attachment_image_tag music.user, :image, :fill, 50, 50, format: 'jpeg', fallback: "noimage_user.jpeg",size: '50x50' , class:"iei_2" %>
 			</p>
 		</div>
-		<div class = "box plofile_bar_name_box">
+		<div class = "box plofile_bar_name_box iei_2 font_size_1">
 			<p>
-				<%= link_to @user.name , user_path(@user.id) %>
+				<%= link_to @user.name , user_path(@user.id) , :style=>"color:#282929" %>
 			</p>
 		</div>
 	</div>
@@ -18,27 +18,27 @@
 
 	<div class="box_right">
 			<div class = "box image_box">
-				<p><%= attachment_image_tag music, :image, :fill, 350, 350, format: 'jpeg', fallback: "noimage_music.jpeg",size: '350x350' %>
+				<p><%= attachment_image_tag music, :image, :fill, 350, 350, format: 'jpeg', fallback: "noimage_music.jpeg",size: '350x350', class:" iei_2" %>
 				</p>
 			</div>
-			<div class = "box music_name_box">
+			<div class = "box music_name_box  iei_2 posted_font">
 				<p><%= music.music_name %></p>
 			</div>
-			<div class = "box artist_name_box">
+			<div class = "box artist_name_box  iei_2 posted_font">
 				<p><%= music.artist_name %></p>
 			</div>
 	</div>
 
-		<div class = "box introduction_box">
+		<div class = "box introduction_box  iei_2 posted_font">
 			<p><%= music.introduction %></p>
 		</div>
 
-		<div class = "box url_box">
+		<div class = "box url_box  iei_2 posted_font">
 			<p><%= music.music_url %></p>
 		</div>
 <!-- fav -->
-		<div class="box favotite_box">
-		<p><%= link_to "Edit My Music", edit_music_path(@user.id) %></p>
+		<div class="box favotite_box  iei_2 posted_font">
+		<p><%= link_to "Edit My Music", edit_music_path(@user.id) , :style=>"color:#282929" %></p>
 		</div>
 <!-- fav -->
 </div>

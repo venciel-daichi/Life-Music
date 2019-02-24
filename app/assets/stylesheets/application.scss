@@ -24,6 +24,10 @@
 .clearfix::after {
   clear: both;
 }
+body{
+	background-color: #f7f7f7;
+	font-family: serif;
+}
 .header_z_index{
 	z-index: 9999;
 	position:  fixed;
@@ -31,6 +35,10 @@
 	width: 100%;
 	top:0;
 }
+/*.nav-tabs{
+	margin-top: 15px;
+}*/
+
 .top_block{
 	width: 100%;
 	height: 50px;
@@ -50,20 +58,31 @@
 	font-size: 20px;
 }
 .header_color{
-	background-color: #c0c0c0;
+	background-color: #282929;
 }
+.navbar{
+	padding-top: 4px;
+	margin-bottom: 0;
+}
+/*ヘッダーの編集*/
+/*.header_text{
+    background-color: #282929 !important;
+   	color: #f7f7f7 !important;
+    border:1px #282929 solid !important;
+}*/
+/*ヘッダーの編集*/
 .text{
-	color:#696969;
+	color:#f7f7f7;
 	font-family: serif;
 }
 .text_top{
-	color: #2b2b2b;
+	color: #282929;
 }
 .top_message{
 	font-family: serif;
 	font-size: 70px;
 	text-align: center;
-	padding-top: 200px;
+	padding-top: 210px;
 	padding-right: 250px;
 }
 .top_back_image{
@@ -72,42 +91,104 @@
 	background-image: url(top_image.jpeg);
 	background-size:cover;
 }
+.about_back_image{
+	width:100%;
+	height: 1000px;
+	background-image: url(top_image.jpeg);
+	background-size:cover;
+}
+.about_box{
+	margin: 0 auto;
+	padding-top: 30px;
+	text-align: center;
+	border:100px;
+	width: 600px;
+	height: 1000px;
+	opacity: 0.9;
+}
+.about_1{
+	margin: 0 auto;
+	width: 580px;
+	height: 450px;
+	border-radius: 10px;
+	background-color: #f7f7f7;
+	color: #282929;
+	padding: 5px 10px;
+	line-height: 23px;
+}
+.my_massege{
+	text-align: right;
+}
+.about_2{
+	margin: 0 auto;
+	width: 580px;
+	height: 490px;
+	border-radius: 10px;
+	background-color: #f7f7f7;
+}
+.daichi_image{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: 0 auto;
+	background-color: #282929;
+}
+.daichi_introduction{
+
+}
 .login_signin{
 	text-align: center;
+	font-family: serif;
+	color:#282929;
+}
+.log_sign_bar{
+	color:#f7f7f7;
+	background-color: #282929;
+	z-index: 9998;
+	position:  fixed;
+	box-sizing:  border-box;
+	width: 100%;
+	top:200px;
+	padding-bottom: 15px;
+	opacity: 0.9;
+}
+.log_sign_button{
+	color: #282929;
 }
 .top_text{
 	font-family: serif;
 	font-size: 50px;
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 120px;
 	padding-left: 450px;
 }
 .main_bar{
-	background-color: black;
+	background-color: #f7f7f7;
 	margin-bottom: 10px;
+	/*border-bottom: solid 2px #282929;*/
 }
 .side_bar{
-	background-color: #4682b4;
+	background-color: #f7f7f7;
 	height: 2000px;
-
+	/*border:solid 3px #fffaf0;*/
 }
 .box_right{
 	float: left;
 }
 .plofile_bar_box{
-	background-color: pink;
+	background-color: #282929;
 	width: 100%;
 	height: 70px;
 }
 
 .plofile_bar_image_box{
-	background-color: white;
+/*	background-color: white;*/
 	width: 50px;
 	height: 50px;
 	float: left;
 }
 .plofile_bar_name_box{
-	background-color: silver;
+	background-color: #f7f7f7;
 	width: 500px;
 	height: 50px;
 	float: right;
@@ -115,29 +196,33 @@
 
 
 .image_box{
-	background-color: white;
+	/*background-color: white;*/
 	width:350px;
 	height: 350px;
 }
 .music_name_box{
-	background-color: silver;
+	background-color: #ededed;
+	/*border:solid 1px #d5d5d5;*/
 	width:350px;
 	height: 80px;
 }
 .artist_name_box{
-	background-color: silver;
+	background-color: #ededed;
+	/*border:solid 1px #d5d5d5;*/
 	width:350px;
 	height: 80px;
 }
 .introduction_box{
 	float: left;
-	background-color:gold;
+	background-color: #ededed;
+	/*border:solid 1px #d5d5d5;*/
 	width:350px;
 	height: 350px;
 }
 .url_box{
 	float: left;
-	background-color: pink;
+	background-color: #ededed;
+	/*border:solid 1px #d5d5d5;*/
 	width:350px;
 	height: 80px;
 }
@@ -160,29 +245,34 @@
 	z-index: 9999;
 	position: fixed;
 	float:right;
-	background-color: orange;
-	width:65px;
-	height: 65px;
-	top:150px;
-	left:460px;
-	border-radius: 15px;
+	background-color: #ededed;
+	/*color:white;*/
+	width:70px;
+	height: 70px;
+	top:650px;
+	left:1300px;
+	border: 2px solid silver;
+	border-radius: 20px 0 20px 0;
+	padding-top: 5px;
 }
 .mypage_box{
-	background-color: #c0c0c0;
-	width: 300px;
+	background-color: #282929;
+	width: 250px;
 	height: 50px;
 	margin: 0 auto;
 	margin-top: 20px;
+	font-size: 20px;
+	padding-top: 10px;
 }
 .user_image_box{
-	background-color: white;
+	/*background-color: white;*/
 	width:180px;
 	height: 180px;
 	margin: 0 auto;
 	margin-top:20px;
 }
 .user_name_box{
-	background-color: silver;
+	background-color: #ededed;
 	width:300px;
 	height: 40px;
 	margin: 0 auto;
@@ -190,13 +280,13 @@
 }
 .user_follow_box{
 	float: left;
-	background-color:gray;
-	width:60px;
+	background-color: #ededed;
+	width:70px;
 	height: 40px;
 	margin-left: 30px;
 }
 .user_introduction_box{
-	background-color: gold;
+	background-color: #ededed;
 	width: 300px;
 	height: 150px;
 	margin: 0 auto;
@@ -204,50 +294,52 @@
 	margin-bottom: 20px;
 }
 .user_edit_box{
-	background-color: gold;
-	width: 300px;
+	background-color: #282929;
+	width: 250px;
 	height: 50px;
 	margin: 0 auto;
 	margin-top: 10px;
 	margin-bottom: 20px;
+	font-size: 20px;
+	padding-top: 10px;
 }
 .side_border{
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid #282929;
 }
 .favorite_music_detail{
 	margin: 10px;
 	text-align: center;
 }
 .favorite_music_image_box{
-	background-color: white;
+	/*background-color: #f7f7f7;*/
 	width:180px;
 	height: 180px;
 	margin:0 auto;
 	margin-top: 10px;
 }
 .favorite_music_name_box{
-	background-color: silver;
+	background-color: #ededed;
 	width: 300px;
 	height:35px;
 	margin:0 auto;
 	margin-top: 10px;
 }
 .favorite_artist_name_box{
-	background-color: silver;
+	background-color: #ededed;
 	width: 300px;
 	height:35px;
 	margin:0 auto;
 	margin-top: 10px;
 }
 .favorite_music_introduction_box{
-	background-color: gold;
+	background-color: #ededed;
 	width:300px;
 	height: 150px;
 	margin:0 auto;
 	margin-top: 10px;
 }
 .favorite_music_url_box{
-	background-color: pink;
+	background-color: #ededed;
 	width: 300px;
 	height: 40px;
 	margin:0 auto;
@@ -257,7 +349,7 @@
 .new_music_box{
 	width: 650px;
 	height: 650px;
-	background-color: black;
+	/*background-color: black;*/
 	margin:0 auto;
 	text-align: center;
 	padding-top: 20px;
@@ -278,7 +370,7 @@
 .new_music_name{
 	width:600px;
 	height: 100px;
-	background-color: gray;
+	/*background-color: silver;*/
 	margin: 0 auto;
 	padding: 10px;
 }
@@ -292,7 +384,7 @@
 .new_introduction{
 	width:600px;
 	height: 100px;
-	background-color: gray;
+	/*background-color: silver;*/
 	margin: 0 auto;
 	padding: 10px;
 }
@@ -302,5 +394,81 @@
 	background-color: silver;
 	margin: 0 auto;
 	padding: 10px;
+}
+.follow_title_bar{
+	height: 65px;
+}
+.follow_title{
+	float: left;
+	margin-left:50px;
+	margin-right: 150px;
+}
+.follow_box{
+	background-color: #282929;
+	margin: 5px;
+	margin-left: 30px;
+}
+.follow_image_box{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 10px;
+}
+.follow_name_box{
+	background-color: #ededed;
+	width:100px;
+	height: 35px;
+	float: right;
+	margin: 10px;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 3px;
+}
+.image_too_big{
+	width: 50px;
+	height: 50px;
+}
+.edit_my_introduction{
+	background-color: silver;
+}
+.iei{
+	border-radius:25px;
+}
+.iei_2{
+	border-radius: 10px;
+}
+.follow_button_box{
+	background-color: #282929;
+}
+.font_size_1{
+	font-size: 25px;
+	padding-top: 7px;
+}
+.font_size_3{
+	font-size:20px;
+	padding-top: 5px;
+}
+.edit_color_1{
+	color:#f7f7f7;
+	background-color: #282929;
+	border-radius: 30px 0 30px 0;
+}
+.edit_color_2{
+	color:#282929;
+}
+.favorite_text{
+	font-size:50px;
+}
+.posted_font{
+	padding: 15px;
+	font-size: 18px;
+}
+.side_f_font{
+	padding-top: 7px;
+	font-size: 18px;
+}
+.side_f_font_2{
+	padding: 10px;
+	font-size: 15px;
 }
 
